@@ -11,7 +11,7 @@ module Rstreamor
 
     def stream_file(request_builder, response_builder)
       content = request_builder.slice_file
-      send_data content, type: request_builder.file_content_type, disposition: 'inline', status: response_builder.response_code
+      send_data content, :type => request_builder.file_content_type, :disposition => 'inline', :status => response_builder.response_code
     end
 
     def set_response_header(request_builder, response_builder)
